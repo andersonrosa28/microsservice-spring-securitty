@@ -1,0 +1,26 @@
+security:
+  sessions: ALWAYS
+
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 123456
+
+  database:
+    driverClassName: org.postgresql.Driver
+
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create-drop
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        hbm2ddl:
+          import_files: data.sql
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true

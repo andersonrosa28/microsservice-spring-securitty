@@ -1,7 +1,7 @@
 package com.br.andersonrosa.microservicespringsecurity.api.v1.controller;
 
-import com.br.andersonrosa.microservicespringsecurity.api.v1.presenter.carrocontroller.CarroPresenter;
-import com.br.andersonrosa.microservicespringsecurity.api.v1.presenter.carrocontroller.model.CarroPresenterModelJson;
+import com.br.andersonrosa.microservicespringsecurity.api.v1.presenter.carro.CarroPresenter;
+import com.br.andersonrosa.microservicespringsecurity.api.v1.presenter.carro.model.CarroPresenterModelJson;
 import com.br.andersonrosa.microservicespringsecurity.domain.carro.entry.CarroEntryGet;
 import com.br.andersonrosa.microservicespringsecurity.domain.carro.entry.dto.CarroInput;
 import com.br.andersonrosa.microservicespringsecurity.domain.carro.entry.dto.CarroOutput;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api")
+@RequestMapping("/v1/api")
 public class CarroController {
 
     private CarroPresenter<CarroPresenterModelJson> carroPresenter;

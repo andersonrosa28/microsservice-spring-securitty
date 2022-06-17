@@ -1,5 +1,6 @@
 package com.br.andersonrosa.microservicespringsecurity.api.v1.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -9,7 +10,7 @@ public class StatusController {
     @GetMapping
     @ResponseBody
     public String status(){
-        return "OK";
+        return HttpStatus.OK.toString();
     }
 
 }

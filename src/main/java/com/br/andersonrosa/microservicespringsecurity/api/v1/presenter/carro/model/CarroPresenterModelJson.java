@@ -1,4 +1,4 @@
-package com.br.andersonrosa.microservicespringsecurity.api.v1.presenter.carrocontroller.model;
+package com.br.andersonrosa.microservicespringsecurity.api.v1.presenter.carro.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

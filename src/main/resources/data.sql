@@ -1,0 +1,1 @@
+insert into usuarios(id, habilitado, login, nome, senha) values ('7e932d97-d5ad-4f82-b61e-358812de2c72', true, 'anderson', 'Anderson rosa',  '$2a$10$vTPhkbvJ4CLHx06VLahx9uiVdtlYhlhIe6IbvQzvfQrzGrRXolFXG');

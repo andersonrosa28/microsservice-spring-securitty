@@ -26,11 +26,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        http.headers(headers -> headers.cacheControl(cache -> cache.disable()))
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             .and()
             .csrf().disable()
             .authorizeRequests()
-            .antMatchers("/api/carro").authenticated()
+            .antMatchers("/v1/api/carro").authenticated()
             .anyRequest().permitAll()
             .and()
             .httpBasic();

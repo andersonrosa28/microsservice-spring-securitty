@@ -31,8 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
             .csrf().disable()
             .authorizeRequests()
-            .antMatchers("/v1/api/carro").authenticated()
-            .anyRequest().permitAll()
+            .antMatchers("/status").permitAll()
+            .anyRequest().authenticated()
             .and()
             .httpBasic();
     }

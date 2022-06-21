@@ -24,3 +24,13 @@ spring:
           lob:
             non_contextual_creation: true
     show-sql: true
+
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  routes:
+    micro2:
+      path: /moto/**
+      sensitiveHeaders:
+      url: http://localhost:8081/

@@ -26,9 +26,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.headers(headers -> headers.cacheControl(cache -> cache.disable()))
-            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            .and()
+        http
             .csrf().disable()
             .authorizeRequests()
             .antMatchers("/status").permitAll()

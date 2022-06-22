@@ -31,6 +31,6 @@ zuul:
     socket-timeout-millis: 60000
   routes:
     micro2:
-      path: /moto/**
+      path: /msdois/**
       sensitiveHeaders:
       url: http://localhost:8081/
